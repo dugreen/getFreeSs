@@ -4,7 +4,7 @@
 
 **需提前安装好python3,requests库,bs4库**
 
-这个脚本是爬取https://global.ishadowx.net/上的免费ss配置。
+这个脚本是爬取 https://global.ishadowx.net 上的免费ss配置。
 
 ```shell
 $ python3 getFreeSs.py
