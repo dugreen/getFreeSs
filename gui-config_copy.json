@@ -1,0 +1,13 @@
+{
+    "configs": [
+        {
+            "method": "aes-256-cfb",
+            "password": "u1rRWTssNv0p",
+            "remarks": "du",
+            "server": "198.199.101.152",
+            "server_port": 8388
+        }
+    ],
+    "localPort": 1080,
+    "shareOverLan": true
+}
