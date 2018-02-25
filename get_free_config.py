@@ -5,20 +5,31 @@ import requests
 from bs4 import BeautifulSoup
 
 def getPage(url):
-    resp = requests.get(url)
-    resp.encoding = 'ascii'
-    return resp.text
+    try:
+        resp = requests.get(url)
+        resp.encoding = 'ascii'
+        return resp.text
+    except Exception:
+        print("get page error")
+        exit(1)
 
 def getFreeSs(page):
     soup = BeautifulSoup(page)
-    lis = soup.find_all("div",class_="hover-text")
+    try:
+        lis = soup.find_all("div",class_="hover-text")
+    except Exception:
+        print("html parse error")
     for li in lis:
-        json = li.find_all("h4")
-        server = json[0].span.string
-        server_port = json[1].span.string[0:5]
-        password = json[2].span.string[0:8]
-        method = json[3].string[7:]
-        jsons.append({"method": method,"password": password,"remarks": "du","server": server,"server_port": int(server_port),"local_address":"127.0.0.1","localPort": 1080})
+        try:
+            json = li.find_all("h4")
+            server = json[0].span.string
+            server_port = json[1].span.string[0:5]
+            password = json[2].span.string[0:8]
+            method = json[3].string[7:]
+            jsons.append({"method": method,"password": password,"remarks": "du","server": server,"server_port": int(server_port),"local_address":"127.0.0.1","localPort": 1080})
+        except Exception:
+            print("someone server error")
+            pass
 
 def main():
     global jsons

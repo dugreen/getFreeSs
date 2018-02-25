@@ -13,4 +13,9 @@ $ sslocal -c ss_config_number.json
 
 之后配置网络代理即可。如果是翻墙新手可参考我之前写的一篇[博客](https://dugreen.github.io/2018/01/26/overTheWall/).
 
-![](/image.png)
+![](/img/image.png)
+
+## tips
+
+* **gui-config.json** debian系列ss的json配置文件格式
+* **gui-config_copy.json** redhat系列ss的json配置文件格式
