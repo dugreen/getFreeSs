@@ -1,8 +1,9 @@
 # 获取免费ss账号脚本
 
-### 
+### get https://global.ishadowx.net
 
 
+### get free-ss.site
 
 ## tips
 
